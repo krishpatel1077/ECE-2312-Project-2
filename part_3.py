@@ -14,11 +14,6 @@ def generate_chirp_tone(duration):
     time = np.arange(0, duration, 1/sr)
     # Frequency of the sine tone varying 0 to 8000Hz
     frequency_range = np.linspace(0, 8000, sr*duration)
-    
-
-
-
-
     # Generate the sine tone
     sine_wave = np.sin(2 * np.pi * frequency * time)
     # Play the sine tone
