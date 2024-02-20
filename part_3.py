@@ -11,9 +11,13 @@ sr= 44100
 #function to create the chirp signal
 def generate_chirp_tone(duration):
     # Time array for the sine tone
-    time = np.arange(0, duration, int(sr*duration))
+    time = np.linspace(0, duration, int(sr*duration))
     # Frequency of the sine tone varying 0 to 8000Hz
     frequency = np.linspace(0, 8000, len(time))
+    
+    output = frequency*time
+    print("this is the output: \n",output)
+
     # Generate the sine tone
     chirp_wave = np.sin(2 * np.pi * frequency * time)
     # Play the sine tone
