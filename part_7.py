@@ -16,8 +16,8 @@ stereo_array = np.array([y,y2])
 stereo_out = np.transpose(stereo_array)
 
 # Play the stereo tone
-#sd.play(stereo_out, samplerate=sr)
-#sd.wait()  # Wait until the stereo tone is done playing
+sd.play(stereo_out, samplerate=sr)
+sd.wait()  # Wait until the stereo tone is done playing
 
 #write stereo audio to file
 write("teamKKA-stereospeechsine.wav", sr, stereo_out)
